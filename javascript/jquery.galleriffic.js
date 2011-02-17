@@ -632,6 +632,11 @@
 				var gallery = this;
 				var nextIndex = this.getNextIndex(imageData.index);
 
+				// removes leftover .current images that could
+				// case ghosting if a long fade is used
+				this.$imageContainer.find(".current").remove();
+				this.$captionContainer.find(".current").remove();
+
 				// Construct new hidden span for the image
 				var newSlide = this.$imageContainer
 					.append('<span class="image-wrapper current"><a class="advance-link" rel="history" href="#'+this.data[nextIndex].hash+'" title="'+imageData.title+'">&nbsp;</a></span>')
