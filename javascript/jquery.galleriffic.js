@@ -2,6 +2,10 @@
  * jQuery Galleriffic plugin
  *
  * Copyright (c) 2008 Trent Foley (http://trentacular.com)
+ * Contributors:
+ *   Ponticlaro
+ *   Christian Ress (http://github.com/ress)
+ *
  * Licensed under the MIT License:
  *   http://www.opensource.org/licenses/mit-license.php
  *
@@ -502,6 +506,9 @@
 			// This function is garaunteed to be called anytime a gallery slide changes.
 			// @param {Object} imageData An object holding the image metadata of the image to navigate to.
 			gotoImage: function(imageData) {
+				if (this.currentImage.index == imageData.index)
+					return this;
+				
 				var index = imageData.index;
 
 				if (this.onSlideChange)
