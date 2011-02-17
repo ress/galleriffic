@@ -1,0 +1,12 @@
+Gallerific - a jQuery plugin for photo galleries
+
+This is a fork of Galleriffic by Trent Foley, available
+under MIT license at http://www.twospy.com/galleriffic.
+
+It hasn't been maintained since November 2009 and got
+incompatible with recent versions of jQuery.
+
+This version has a number of fixes related to jQuery 1.5.0
+and bugs that might have been in the original version.
+
+For usage information see the examples/index.html file.
